@@ -13,9 +13,11 @@ const Home = () => {
   if (!user) {
     return <Navigate to="/login" />;
   } else {
+    console.log(user);
     return (
       <div>
         <h1>ホームページ</h1>
+        <p>{user.email}がログイン中です</p>
         <button onClick={handleLogout}>ログアウト</button>
       </div>
     );
